@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: none;
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    background: #eee;
+}
+a {
+    color: coral;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    transition: all .2s ease;
+}
+a:hover {
+    color: orangered;
+    border-bottom: 1px solid #eee;
+    transition: all .2s ease;
+}
+h1, h2, h3, h4 {
+    margin: 15px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+p {
+    margin: 15px;
+    line-height: 24px;
+}
+body {
+    max-width: 1024px;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: flex-start;
+    background: #fff;
+}
+header, nav, footer, audio {
+    width: 100%;
+    flex: 0 0 auto;
+}
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+header > img {
+    width: auto;
+    max-height: 48px;
+    margin: 15px;
+}
+header > h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+nav {
+    background: #eee;
+}
+nav > ul {
+    display: flex;
+    list-style: none;
+    background: coral;
+}
+nav > ul > li:first-of-type {
+    display: none;
+    text-align: center;
+}
+footer {
+    border-top: 1px solid #eee;
+}
+footer > p {
+    text-align: center;
+    font-size: 12px;
+}
+footer > p > a:hover {
+    border-bottom: 1px solid #eee;
+}
+figure {
+    padding: 20px;   
+}
+figcaption {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+video {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+table {
+    border-collapse: collapse;
+    width: calc(100% - 40px);
+    margin: 0 20px; 
+}
+table caption {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px;
+}
+table th {
+    color: coral;
+    padding: 10px;
+}
+table td {
+    padding: 5px 10px;
+    border: 1px solid #eee;
+}
+form {
+    width: 100%;
+    margin: 0 20px; 
+}
+label {
+    display: block;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 12px;
+    color: #777;
+}
+input,
+button {
+    font-family: "Open Sans", sans-serif;
+    display: block;
+    margin: 10px auto 20px auto;
+    padding: 7px 15px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+}
+input:not([type="submit"]) {
+    min-width: 144px;
+    width: 100%;
+    transition: box-shadow .2s ease;
+}
+input:not([type="submit"]):focus {
+    box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .5);
+    transition: box-shadow .2s ease;
+}
+input[type="submit"],
+button {
+    min-width: 86px;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid coral;
+    background: coral;
+    transition: all .2s ease;
+}
+input[type="submit"]:hover,
+button:hover {
+    border: 1px solid orangered;
+    background: orangered;
+    transition: all .2s ease;
+}
+#auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+}
+#auth > p {
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+#main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+}
+#main > section, #main > aside {
+    padding: 15px;
+}
+#main > section {
+    width: 70%;
+}
+#main > aside {
+    width: 30%;
+    border-left: 1px solid #eee;
+}
+.table {
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 100%;
+}
+.nav-link > a {
+    display: block;
+    border-bottom: 0;
+    padding: 15px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: background .2s ease;
+}
+.nav-link > a:hover {
+    color: #fff;
+    border-bottom: 0;
+    background: orangered;
+    transition: background .2s ease;
+}
+@media screen and (max-width: 768px) {
+    header > img {
+        max-height: initial;
+        width: 100%;
+        max-width: 90%;
+    }
+    header > h1 {
+        display: none;
+    }
+    header, nav > ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav > ul > li:first-of-type {
+        display: block;
+    }
+    nav > ul > li:not(:first-of-type) {
+        display: none;
+    }
+    nav > ul > li {
+        width: 100%;
+    }
+    #main > section, #main > aside {
+        width: 100%;   
+    }
+    .nav-link > a {
+        padding: 15px 20px;
+    }
+}
